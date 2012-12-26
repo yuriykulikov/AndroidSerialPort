@@ -1,0 +1,34 @@
+@startuml
+
+hide empty fields
+hide empty members
+
+class Activity
+class Service {
+    ServiceHandler
+}
+
+Activity -down-> Service : SEND_STRING, string
+Service -up-> Activity : READ_STRING, string
+
+interface ITxChannel
+interface IStringPublisher
+
+Service o-- ITxChannel : write(string)
+Service o-- IStringPublisher : register(Handler)
+
+class ProxyTxChannel
+ProxyTxChannel .down.|> ITxChannel
+ProxyTxChannel o-- Bluetooth
+ProxyTxChannel o-- Emulation
+ProxyTxChannel o-- SerialPort
+
+class ProxyStringPublisher
+ProxyStringPublisher .down.|> IStringPublisher
+ProxyStringPublisher o-- Bluetooth
+ProxyStringPublisher o-- Emulation
+ProxyStringPublisher o-- SerialPort
+
+
+
+@enduml
