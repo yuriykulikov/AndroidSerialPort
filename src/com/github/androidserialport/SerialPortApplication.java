@@ -1,6 +1,7 @@
 package com.github.androidserialport;
 
 import android.app.Application;
+import android.content.Intent;
 
 import com.better.wakelock.LogcatLogWriter;
 import com.better.wakelock.Logger;
@@ -14,5 +15,8 @@ public class SerialPortApplication extends Application {
 
         Logger logger = Logger.getDefaultLogger();
         logger.addLogWriter(new LogcatLogWriter());
+
+        // TODO for now just start
+        startService(new Intent(this, ReadingService.class));
     }
 }

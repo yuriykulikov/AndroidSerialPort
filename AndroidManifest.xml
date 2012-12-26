@@ -7,19 +7,37 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="15" />
 
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <application
+        android:name=".SerialPortApplication"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
             android:name=".ConsoleActivity"
-            android:label="@string/title_activity_console" >
+            android:label="@string/title_activity_console"
+            android:theme="@android:style/Theme.Holo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".ReadingService"
+            android:exported="false" >
+        </service>
+        <service
+            android:name=".WritingService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.github.androidserialport.WritingService.ACTION_SEND_STRING" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
