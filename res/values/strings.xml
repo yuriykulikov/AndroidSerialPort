@@ -4,5 +4,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_console">ConsoleActivity</string>
-
+    <string name="prefs_bluetooth_settings_title">Bluetooth</string>
+    <string name="prefs_bluetooth_settings_summary">go to Bluetooth System Settings&#8230;</string>
+    <string name="prefs_comm_type_title">Communication type</string>
 </resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Preferences" >
+
+    <ListPreference
+        android:entries="@array/comm_types_name"
+        android:entryValues="@array/comm_types_value"
+        android:key="COMM_TYPE"
+        android:persistent="true"
+        android:title="@string/prefs_comm_type_title" >
+    </ListPreference>
+
+    <PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:summary="Pair devices here"
+        android:title="Bluetooth preferences" >
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.android.settings.bluetooth.BluetoothSettings"
+            android:targetPackage="com.android.settings" />
+    </PreferenceScreen>
+</PreferenceScreen>

@@ -26,7 +26,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".SerialPreferenceActivity"
+            android:label="@string/menu_settings"
+            android:theme="@android:style/Theme.Holo" >
+        </activity>
         <service
             android:name=".ReadingService"
             android:exported="false" >

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string-array name="comm_types_name">
+		<item>serial</item>
+		<item>emulation</item>
+		<item>emulationSimple</item>
+		<item>bluetooth</item>
+	</string-array>
+	
+	<string-array name="comm_types_value">
+		<item>serial</item>
+		<item>emulation</item>
+		<item>emulationSimple</item>
+		<item>bluetooth</item>
+	</string-array>
+
+</resources>
