@@ -25,7 +25,7 @@ import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 import java.security.InvalidParameterException;
 
-import com.better.wakelock.Logger;
+import com.github.androidutils.logger.Logger;
 
 /** Describes serial port */
 public class SerialPort implements IRxChannel, ITxChannel {

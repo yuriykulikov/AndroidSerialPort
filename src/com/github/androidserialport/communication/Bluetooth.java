@@ -13,7 +13,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Handler;
 
-import com.better.wakelock.Logger;
+import com.github.androidutils.logger.Logger;
 
 public class Bluetooth implements ITxChannel, IStringPublisher {
     private BluetoothSocket mSocket;
@@ -92,11 +92,9 @@ public class Bluetooth implements ITxChannel, IStringPublisher {
             // TODO handle disconnects gracefully
 
             if (action.equals(BluetoothDevice.ACTION_FOUND)) {
-                stateMachine.onDeviceFound((BluetoothDevice) intent
-                        .getParcelableExtra(BluetoothDevice.EXTRA_DEVICE));
+                stateMachine.onDeviceFound((BluetoothDevice) intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE));
             } else if (action.equals(BluetoothDevice.ACTION_BOND_STATE_CHANGED)) {
-                stateMachine.onDevicePaired((BluetoothDevice) intent
-                        .getParcelableExtra(BluetoothDevice.EXTRA_DEVICE));
+                stateMachine.onDevicePaired((BluetoothDevice) intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE));
             } else if (action.equals(BluetoothAdapter.ACTION_DISCOVERY_FINISHED)) {
                 stateMachine.onDiscoveryFinished();
             }

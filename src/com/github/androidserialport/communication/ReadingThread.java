@@ -5,7 +5,7 @@ import java.io.IOException;
 import android.os.Handler;
 import android.os.Message;
 
-import com.better.wakelock.Logger;
+import com.github.androidutils.logger.Logger;
 
 public class ReadingThread extends Thread implements IStringPublisher {
     private static final String TAG = "ReceivingThread";

@@ -3,9 +3,9 @@ package com.github.androidserialport;
 import android.app.Application;
 import android.content.Intent;
 
-import com.better.wakelock.LogcatLogWriter;
-import com.better.wakelock.Logger;
 import com.github.androidserialport.communication.CommunicationManager;
+import com.github.androidutils.logger.LogcatLogWriter;
+import com.github.androidutils.logger.Logger;
 
 public class SerialPortApplication extends Application {
     @Override

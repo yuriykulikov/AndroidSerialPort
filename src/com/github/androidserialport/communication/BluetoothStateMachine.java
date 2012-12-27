@@ -10,7 +10,7 @@ import android.bluetooth.BluetoothSocket;
 import android.os.Handler;
 import android.os.Message;
 
-import com.better.wakelock.Logger;
+import com.github.androidutils.logger.Logger;
 
 /**
  * This class is a model for a Bluetooth connection. Manages connection,

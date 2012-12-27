@@ -6,7 +6,7 @@ import java.util.Iterator;
 import android.os.Handler;
 import android.os.Message;
 
-import com.better.wakelock.Logger;
+import com.github.androidutils.logger.Logger;
 
 public class Emulation implements ITxChannel, IStringPublisher {
 

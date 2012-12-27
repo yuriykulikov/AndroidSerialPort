@@ -6,9 +6,9 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 
-import com.better.wakelock.Logger;
 import com.github.androidserialport.communication.CommunicationManager;
 import com.github.androidserialport.communication.IStringPublisher;
+import com.github.androidutils.logger.Logger;
 
 public class ReadingService extends Service implements Handler.Callback {
     public static final String ACTION_READ_STRING = "com.github.androidserialport.ReadingService.ACTION_READ_STRING";

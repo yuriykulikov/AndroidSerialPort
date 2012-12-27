@@ -5,7 +5,7 @@ import java.util.Map;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 
-import com.better.wakelock.Logger;
+import com.github.androidutils.logger.Logger;
 
 /**
  * ProxyTxChannel is a representative for the connection type Tx (Serial port,
