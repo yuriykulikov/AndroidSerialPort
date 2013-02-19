@@ -55,10 +55,10 @@ public class Emulation implements ITxChannel, IStringPublisher {
                 receivedString = "medved";
             } else if (stringToSend.contains("rdr get tags")) {
                 if (isSimplified == true) {
-                    Logger.d("isSimplified == true");
+                    Logger.getDefaultLogger().d("isSimplified == true");
                     receivedString = responses.get(0);
                 } else {
-                    Logger.d("isSimplified == false");
+                    Logger.getDefaultLogger().d("isSimplified == false");
                     if (!iterator.hasNext()) {
                         iterator = responses.iterator();
                     }

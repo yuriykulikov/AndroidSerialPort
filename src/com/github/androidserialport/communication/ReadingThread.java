@@ -42,7 +42,7 @@ public class ReadingThread extends Thread implements IStringPublisher {
                 receivedString = receivedString.concat(receivedStringSymbol);
                 if (receivedString.contains("\n")) {
                     {
-                        Logger.d("Received string: " + receivedString);
+                        Logger.getDefaultLogger().d("Received string: " + receivedString);
                     }
                     Message msg;
                     if (recipientHandler != null) {
@@ -52,16 +52,16 @@ public class ReadingThread extends Thread implements IStringPublisher {
                         recipientHandler.sendMessage(msg);
                     } else {
                         {
-                            Logger.d("recipientHandler is null");
+                            Logger.getDefaultLogger().d("recipientHandler is null");
                         }
                     }
                     receivedString = "";
                 }
             }
         } catch (IOException e) {
-            Logger.e("IOException in ReadingThread - " + e.getMessage());
+            Logger.getDefaultLogger().e("IOException in ReadingThread - " + e.getMessage());
         }
-        Logger.e("ReadingThread is finished");
+        Logger.getDefaultLogger().e("ReadingThread is finished");
         if (finishedHandler != null) {
             finishedHandler.sendEmptyMessage(msgWhatFinished);
         }
@@ -74,7 +74,7 @@ public class ReadingThread extends Thread implements IStringPublisher {
         this.msgWhat = what;
         if (!isAlive()) {
             {
-                Logger.d("start");
+                Logger.getDefaultLogger().d("start");
             }
             start();
         }

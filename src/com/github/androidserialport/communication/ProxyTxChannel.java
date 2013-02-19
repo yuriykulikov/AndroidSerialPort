@@ -47,7 +47,7 @@ public class ProxyTxChannel implements ITxChannel, OnSharedPreferenceChangeListe
         if (key.equals(COMM_TYPE)) {
             String activeTxChannelName = sp.getString(COMM_TYPE, "emulation");
             activeTxChannel = txChannels.get(activeTxChannelName);
-            Logger.d("activeTxChannelName = " + activeTxChannel);
+            Logger.getDefaultLogger().d("activeTxChannelName = " + activeTxChannel);
         }
 
     }

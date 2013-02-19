@@ -44,7 +44,7 @@ public class ReadingService extends Service implements Handler.Callback {
             return true;
 
         default:
-            Logger.d("unknown data");
+            Logger.getDefaultLogger().d("unknown data");
             return false;
         }
     }

@@ -76,7 +76,7 @@ public class SerialPort implements IRxChannel, ITxChannel {
      * @throws IOException
      */
     private SerialPort(String path, int baudrate) {
-        Logger.d("SerialPort(" + path + ", " + baudrate + ")");
+        Logger.getDefaultLogger().d("SerialPort(" + path + ", " + baudrate + ")");
         buffer = ByteBuffer.allocate(64);
         openPort(path, baudrate);
     }
@@ -121,7 +121,7 @@ public class SerialPort implements IRxChannel, ITxChannel {
         try {
             serialOutputChannel.write(ByteBuffer.wrap(stringToSend.getBytes()));
         } catch (IOException e) {
-            Logger.e("Was not able to write", e);
+            Logger.getDefaultLogger().e("Was not able to write", e);
         }
     }
 }
