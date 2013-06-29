@@ -14,7 +14,7 @@ public class SerialPortApplication extends Application {
         CommunicationManager.init(getApplicationContext());
 
         Logger logger = Logger.getDefaultLogger();
-        logger.addLogWriter(new LogcatLogWriter());
+        logger.addLogWriter(LogcatLogWriter.getInstance());
 
         // TODO for now just start
         startService(new Intent(this, ReadingService.class));
