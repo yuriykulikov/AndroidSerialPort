@@ -1,14 +1,20 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
+        <TextView
+            android:id="@+id/textViewIncoming"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="1.00"
+            android:scrollbars="vertical"
+            android:text="Incoming strings" />
+
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true" >
+        android:layout_height="wrap_content" >
 
         <EditText
             android:id="@+id/editTextOutgoing"
@@ -24,15 +30,4 @@
             android:layout_weight="1"
             android:text="Send!" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/textViewIncoming"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/linearLayout1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:text="Incoming strings" />
-
-</RelativeLayout>
+</LinearLayout>
