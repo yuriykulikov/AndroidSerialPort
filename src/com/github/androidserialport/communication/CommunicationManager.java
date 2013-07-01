@@ -39,8 +39,7 @@ public class CommunicationManager {
      * @param context
      */
     public static void init(Context context) {
-        SharedPreferences defaultSharedPreferences = PreferenceManager
-                .getDefaultSharedPreferences(context);
+        SharedPreferences defaultSharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
         // Creating HashMaps
         Map<String, ITxChannel> txChannels = new HashMap<String, ITxChannel>();
         Map<String, IStringPublisher> publishers = new HashMap<String, IStringPublisher>();
