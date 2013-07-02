@@ -42,6 +42,13 @@
                 <action android:name="com.github.androidserialport.WritingService.ACTION_SEND_STRING" />
             </intent-filter>
         </service>
+        <receiver
+            android:name=".KeyEventAnalyzer"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.github.androidserialport.ReadingService.ACTION_READ_STRING" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
